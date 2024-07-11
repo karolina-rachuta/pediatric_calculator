@@ -20,7 +20,7 @@ function Login() {
 
   return (
     <div className="login-box">
-      <h1>Zaloguj się</h1>
+      <h1>Login</h1>
       <input
         type="text"
         ref={inputEmail}

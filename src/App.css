@@ -1,5 +1,14 @@
 body, html {
   font-size: 16px;
+  box-sizing: border-box;
+}
+
+input {
+  border: none;
+  border-bottom: 0.0625rem solid lightblue;
+  margin-bottom: 0.3125rem;
+  background-color: aliceblue;
+  padding: 0.3125rem;
 }
 
 .validation-error {
