@@ -21,6 +21,9 @@
 }
 
 .child-avatar {
+  width: 100%;
+  max-width: 6.25rem;
+  height: 100%;
   max-height: 6.25rem;
 }
 
