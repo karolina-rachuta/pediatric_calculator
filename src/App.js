@@ -3,13 +3,14 @@ import './App.css';
 import Login from "./components/Login/Login";
 import Register from "./components/register/Register";
 import AddChild from "./components/AddChild/AddChild";
+import Home from "./components/Home/Home";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
       <Routes>
-        <Route path="/" element={<div>Home</div>}/>
+        <Route path="/" element={<Home />}/>
         <Route path="/login" element={<Login />}/>
         <Route path="/register" element={<Register />}/>
         <Route path="/addChild" element={<AddChild />}/>
