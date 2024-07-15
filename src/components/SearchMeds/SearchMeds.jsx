@@ -10,13 +10,13 @@ const medications = [
       {
         id: 1,
         name: "Ibufen",
-        dose: 1,
+        dose: 1.3,
         unit: "unit",
       },
       {
         id: 2,
         name: "Ibum",
-        dose: 1,
+        dose: 0.5,
         unit: "unit",
       },
     ],
@@ -28,13 +28,13 @@ const medications = [
       {
         id: 1,
         name: "Apap",
-        dose: 1,
+        dose: 1.4,
         unit: "unit",
       },
       {
         id: 2,
         name: "Med2",
-        dose: 1,
+        dose: 1.8,
         unit: "unit",
       },
     ],
@@ -46,13 +46,13 @@ const medications = [
       {
         id: 1,
         name: "Apap2",
-        dose: 1,
+        dose: 1.2,
         unit: "unit",
       },
       {
         id: 2,
         name: "Med3",
-        dose: 1,
+        dose: 1.05,
         unit: "unit",
       },
     ],
@@ -62,6 +62,8 @@ const medications = [
 function SearchMeds() {
   const [ingredientsResult, setIngredientsResult] = useState([]);
   const [ingredient, setIngredient] = useState("");
+  const [medication, setMedication] = useState("");
+  const [dose, setDose] = useState("");
 
   useEffect(() => {
     if (ingredient.length >= 2) {
@@ -73,9 +75,17 @@ function SearchMeds() {
     }
   }, [ingredient]);
 
+  useEffect(() => {
+    setDose(medications.flatMap(med => med.drugs).filter(brand => brand.name === medication).map(brand => `${brand.dose} ${brand.unit}`))
+  }, [medication]);
+
   const handleIngredient = (e) => {
     setIngredient(e.target.value);
   };
+
+  const handleSelectedMedication = (e) => {
+    setMedication(e.target.value);
+  }
 
   return (
     <div className="search-meds-box">
@@ -104,7 +114,7 @@ function SearchMeds() {
       </ul>
       <div className="control-group">
         <label htmlFor="medication">Medication</label>
-          <select id="medication">
+          <select id="medication" onChange={handleSelectedMedication}>
             <option value=""></option>
             {medications
               .filter((med) => med.api.includes(ingredient))
@@ -116,7 +126,7 @@ function SearchMeds() {
       </div>
 
       <h2>Recommended Dosage:</h2>
-      <div></div>
+      <div>{dose}</div>
       <Link className="btn btn-icon" to="/">
         Start giving medication <span>+</span>
       </Link>
