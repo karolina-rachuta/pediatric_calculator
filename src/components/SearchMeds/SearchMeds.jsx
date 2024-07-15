@@ -104,7 +104,15 @@ function SearchMeds() {
       </ul>
       <div className="control-group">
         <label htmlFor="medication">Medication</label>
-        <input type="text" id="medication" />
+          <select id="medication">
+            <option value=""></option>
+            {medications
+              .filter((med) => med.api.includes(ingredient))
+              .flatMap((med) => med.drugs)
+              .map((brand) => (
+                <option value={brand.name}>{brand.name}</option>
+              ))}
+          </select>
       </div>
 
       <h2>Recommended Dosage:</h2>
