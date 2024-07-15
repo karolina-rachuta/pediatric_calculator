@@ -3,4 +3,24 @@
     min-height: 3rem;
     padding: 0.625rem;
     background-color: rgb(45, 208, 173);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    
+}
+
+.logo-style {
+    width: 100%;
+    max-width: 3rem;
+    height: 100%;
+    max-height: 3rem;
+}
+
+
+.login-nav {
+    text-decoration: none;
+    padding-right: 2rem;
+    font-weight: bold;
+    color:mediumslateblue
 }

@@ -26,7 +26,11 @@ function ChildrenNav() {
     <>
       <div className="child-wrapper">
         {children.map(({ id, name }) => (
-          <div className="child-avatar-container" key={id} onClick={()=> setActiveChild(id)}>
+          <div
+            className="child-avatar-container"
+            key={id}
+            onClick={() => setActiveChild(id)}
+          >
             <img
               className={
                 activeChild === id
