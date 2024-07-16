@@ -26,7 +26,7 @@
 
 .child-active {
     /* border: 0.125rem solid blue; */
-    outline: 0.18rem solid blue;
+    outline: 0.25rem solid mediumslateblue;
     outline-offset: -0.19rem;
     border-radius: 50%;
 }

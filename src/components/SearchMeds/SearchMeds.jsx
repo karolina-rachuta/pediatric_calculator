@@ -120,7 +120,7 @@ function SearchMeds() {
               .filter((med) => med.api.includes(ingredient))
               .flatMap((med) => med.drugs)
               .map((brand) => (
-                <option value={brand.name}>{brand.name}</option>
+                <option key={brand.name} value={brand.name}>{brand.name}</option>
               ))}
           </select>
       </div>
