@@ -1,15 +1,17 @@
+import React, { useState } from "react";
 import NavBar from "../NavBar/NavBar";
 import ChildrenNav from "../ChildrenNav/ChildrenNav";
 import SearchMeds from "../SearchMeds/SearchMeds";
 import "./Home.css";
 
-function Home() {
+
+function Home({children, activeChild, setActiveChild}) {
   return (
     <>
       <NavBar />
       <div className="home-box">
-        <ChildrenNav />
-        <SearchMeds />
+        <ChildrenNav children={children} activeChild={activeChild} setActiveChild={setActiveChild}/>
+        <SearchMeds activeChild={activeChild}/>
       </div>
     </>
   );

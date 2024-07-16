@@ -2,30 +2,14 @@ import { Link } from "react-router-dom";
 import avatar from "../../images/girl.png";
 import addIcon from "../../images/plus.svg";
 import "./ChildrenNav.css";
-import { useState } from "react";
 
-const children = [
-  {
-    id: 1,
-    name: "Anna",
-  },
 
-  {
-    id: 2,
-    name: "Zosia",
-  },
-  {
-    id: 3,
-    name: "Grazyna",
-  },
-];
-function ChildrenNav() {
-  const [activeChild, setActiveChild] = useState(1);
+function ChildrenNav({children, activeChild, setActiveChild}) {
 
   return (
     <>
       <div className="child-wrapper">
-        {children.map(({ id, name }) => (
+        {children && children.map(({ id, name }) => (
           <div
             className="child-avatar-container"
             key={id}

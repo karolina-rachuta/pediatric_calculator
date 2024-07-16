@@ -59,7 +59,7 @@ const medications = [
   },
 ];
 
-function SearchMeds() {
+function SearchMeds({activeChild}) {
   const [ingredientsResult, setIngredientsResult] = useState([]);
   const [ingredient, setIngredient] = useState("");
   const [medication, setMedication] = useState("");
@@ -127,7 +127,7 @@ function SearchMeds() {
 
       <h2>Recommended Dosage:</h2>
       <div>{dose}</div>
-      <Link className="btn btn-icon" to="/">
+      <Link className="btn btn-icon" to={`/dose/${activeChild}`}>
         Start giving medication <span>+</span>
       </Link>
     </div>

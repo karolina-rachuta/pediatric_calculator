@@ -1,0 +1,15 @@
+.dose-box{
+    width: 20rem;
+    max-width: 100%;
+    min-height: 25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    margin: auto;
+    border: 0.0625rem solid black;
+    border-radius: 0.25rem;
+    box-shadow: 0.125rem 0.125rem 0.5rem lightgray;
+    padding: 0.625rem;
+    margin-top: 1.25rem;
+}
