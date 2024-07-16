@@ -4,7 +4,7 @@ import addIcon from "../../images/plus.svg";
 import "./ChildrenNav.css";
 
 
-function ChildrenNav({children, activeChild, setActiveChild}) {
+function ChildrenNav({children, activeChild, setActiveChild, showUI}) {
 
   return (
     <>
@@ -27,18 +27,18 @@ function ChildrenNav({children, activeChild, setActiveChild}) {
             <p>{name}</p>
           </div>
         ))}
-        <Link to="/addChild">
+       { showUI && <Link to="/addChild">
           <img src={addIcon} className="add-icon" />
-        </Link>
+        </Link>}
       </div>
-      <div>
+     { showUI && <div>
         <Link to="/addChild" className="btn">
           Edit
         </Link>
         <Link to="/" className="btn">
           History of Dosing
         </Link>
-      </div>
+      </div>}
     </>
   );
 }

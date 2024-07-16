@@ -4,14 +4,18 @@ import ChildrenNav from "../ChildrenNav/ChildrenNav";
 import SearchMeds from "../SearchMeds/SearchMeds";
 import "./Home.css";
 
-
-function Home({children, activeChild, setActiveChild}) {
+function Home({ children, activeChild, setActiveChild }) {
   return (
     <>
       <NavBar />
       <div className="home-box">
-        <ChildrenNav children={children} activeChild={activeChild} setActiveChild={setActiveChild}/>
-        <SearchMeds activeChild={activeChild}/>
+        <ChildrenNav
+          children={children}
+          activeChild={activeChild}
+          setActiveChild={setActiveChild}
+          showUI={true}
+        />
+        <SearchMeds activeChild={activeChild} />
       </div>
     </>
   );
