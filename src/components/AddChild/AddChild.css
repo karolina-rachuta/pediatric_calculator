@@ -1,6 +1,6 @@
 .child-box {
-  width: 20rem;
-  max-width: 100%;
+  max-width: 20rem;
+  width: 100%;
   min-height: 25rem;
   display: flex;
   flex-direction: column;
@@ -34,14 +34,11 @@
 }
 
 .child-layout {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
 }
 
 .child-box input {
   text-align: right;
 }
-
-
-

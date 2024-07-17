@@ -127,7 +127,7 @@ function SearchMeds({activeChild}) {
 
       <h2>Recommended Dosage:</h2>
       <div>{dose}</div>
-      <Link className="btn btn-icon" to={`/dose/${activeChild}`}>
+      <Link className="btn btn-icon" to={`/dose/${activeChild}`} state={{medication: medication}}>
         Start giving medication <span>+</span>
       </Link>
     </div>

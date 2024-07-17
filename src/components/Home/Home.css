@@ -1,6 +1,6 @@
 .home-box{
-    width: 20rem;
-    max-width: 100%;
+    max-width: 20rem;
+    width: 100%;
     min-height: 25rem;
     display: flex;
     flex-direction: column;

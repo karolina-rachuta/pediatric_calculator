@@ -1,0 +1,18 @@
+.timeline-box {
+  width: 100%;
+  overflow: auto;
+}
+
+.timeline-header,
+.timeline-line {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.timeline-header span,
+.timeline-line span {
+  display: inline-block;
+  width: 100%;
+}
